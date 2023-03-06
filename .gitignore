@@ -31,3 +31,9 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### HSQLDB ###
+jdbc-advanced.lck
+jdbc-advanced.log
+jdbc-advanced.properties
+jdbc-advanced.script

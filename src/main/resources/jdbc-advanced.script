@@ -1,0 +1,38 @@
+CREATE USER SA PASSWORD ""
+CREATE USER "admin" PASSWORD "password"
+
+GRANT DBA TO SA
+GRANT DBA TO "admin"
+
+CREATE TABLE users (
+	id INT,
+	first_name VARCHAR(50),
+	last_name VARCHAR(50),
+	timestamp DATE
+);
+
+CREATE TABLE friendships (
+    userId1 INT,
+    userIs2 INT,
+    timestamp DATETIME
+);
+
+CREATE TABLE posts (
+	id INT,
+	userId INT,
+	text TEXT,
+	timestamp DATETIME
+);
+
+CREATE TABLE likes (
+    postId INT,
+    userId INT,
+    timestamp DATETIME
+);
+
+insert into users (id, first_name, last_name, birthdate) values (1, 'Ray', 'Coulter', '08/10/2002');
+insert into users (id, first_name, last_name, birthdate) values (2, 'Horatia', 'Dolohunty', '30/07/1995');
+insert into users (id, first_name, last_name, birthdate) values (3, 'Saree', 'Newbatt', '29/05/2007');
+insert into users (id, first_name, last_name, birthdate) values (4, 'Maddie', 'Brisson', '20/02/2010');
+insert into users (id, first_name, last_name, birthdate) values (5, 'Corina', 'Beininck', '19/03/2007');
+

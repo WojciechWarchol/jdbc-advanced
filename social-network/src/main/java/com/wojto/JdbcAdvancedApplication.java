@@ -1,7 +1,5 @@
-package com.wojto.jdbcadvanced;
+package com.wojto;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -63,25 +61,25 @@ public class JdbcAdvancedApplication {
 		System.out.println("Created all databases");
 
 		try {
-			List<String> userInsertStatements = Files.readAllLines(Paths.get("src/main/resources/users.sql"));
+			List<String> userInsertStatements = Files.readAllLines(Paths.get("social-network/src/main/resources/users.sql"));
 			for (String command : userInsertStatements) {
 				statement.executeQuery(command);
 			}
 			System.out.println("Finished filling USERS database");
 
-			List<String> friendshipInsertStatements = Files.readAllLines(Paths.get("src/main/resources/friendships.sql"));
+			List<String> friendshipInsertStatements = Files.readAllLines(Paths.get("social-network/src/main/resources/friendships.sql"));
 			for (String command : friendshipInsertStatements) {
 				statement.executeQuery(command);
 			}
 			System.out.println("Finished filling FRIENDSHIPS database");
 
-			List<String> postInsertStatements = Files.readAllLines(Paths.get("src/main/resources/posts.sql"));
+			List<String> postInsertStatements = Files.readAllLines(Paths.get("social-network/src/main/resources/posts.sql"));
 			for (String command : postInsertStatements) {
 				statement.executeQuery(command);
 			}
 			System.out.println("Finished filling POSTS database");
 
-			List<String> likeInsertStatements = Files.readAllLines(Paths.get("src/main/resources/likes.sql"));
+			List<String> likeInsertStatements = Files.readAllLines(Paths.get("social-network/src/main/resources/likes.sql"));
 			for (String command : likeInsertStatements) {
 				statement.executeQuery(command);
 			}
